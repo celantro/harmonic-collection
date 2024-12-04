@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(images/AdobeStock_15658970.jpeg) lightgray 25% / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1 {
+    color: #000;
+    text-align: center;
+    font-family: "grapesoda", Helvetica;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.96;
+    mix-blend-mode: multiply;
+}
+
+

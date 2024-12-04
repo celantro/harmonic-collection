@@ -1,0 +1,139 @@
+*{
+  margin:0px;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+  @font-face {
+    font-family: "pixelcursive";
+    src: url("fonts/phosphenefont-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+  @font-face {
+    font-family: "pixelify";
+    src: url("fonts/PixelifySans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+.heading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.button-container{
+  height: 65px;
+  width: 65px;
+  position: fixed;
+  top: 50px;
+  left: 20px;
+
+}
+
+.button-container img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+}
+
+.backbutton{
+  position: fixed;
+  width: 100px;
+  left: 75px;
+  top: 100px;
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+.backbutton:hover{
+  cursor: pointer;
+  transform: scale(2);
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+h1 {
+  color: #000;
+  text-align: center;
+  font-family: "grapesoda", Helvetica;
+  font-size: 5vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  opacity: 0.85;
+  mix-blend-mode: multiply;
+}
+
+h2 {
+  font-family: "pixelcursive", Helvetica;
+  text-align: center;
+  font-size: 4vw;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(images/AdobeStock_15658970.jpeg) lightgray 25% / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.cardigan {
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 0px;
+}
+.cardiganimg {
+  max-width: 60%;
+  height: auto;
+}
+
+.content2{
+  display: flex;
+  flex-direction: row;
+}
+.textbubble{
+  position: relative;
+}
+.text {
+  position: fixed;
+  top: 250px;
+  left: 500px;
+  color: #000000;
+  font-family: "pixelify", "Inter-Regular", Helvetica;
+  font-size: 11px;
+  width: 300px;
+  border-radius: 50px;
+}
+.bubble{
+  height: 400px;
+  position: fixed;
+  top: 50px;
+  left: 300px;
+}
+.cell{
+  position: fixed;
+  height: 200px;
+  right: 200px;
+  bottom: 200px;
+}
+

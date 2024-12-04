@@ -1,0 +1,59 @@
+
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(images/closet.png) / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.masterbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    size: 100vh;
+    background: url(images/closet.png) / cover no-repeat;
+}
+.heading{
+    display: flex;
+    height: 20vh;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: grapesoda, Helvetica, monospace;
+    background-color: white;
+}
+.content{
+    display: flex;
+    flex-grow:2;
+    justify-content: center;
+}
+.closet{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.clothes{
+    margin: 0;
+    padding: -20px;
+    display: flex;
+    height: 300px;
+}
+
+.clothes:hover{
+    height: 400px;
+    animation-timing-function: ease-in-out;
+    
+}
