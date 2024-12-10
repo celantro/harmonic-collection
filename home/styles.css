@@ -23,33 +23,40 @@ body {
     flex-direction: column;
     justify-content: center;
     size: 100vh;
-    background: url(images/closet.png) / cover no-repeat;
+    background: url(images/closet.png)
+}
+.runninghead{
+    background-color: lightblue;
+    display: flex;
+    padding-top: 30px;
 }
 .heading{
     display: flex;
-    height: 20vh;
+    font-size: 2vw;
     padding: 5px;
     text-align: center;
     justify-content: center;
     align-items: center;
     font-family: grapesoda, Helvetica, monospace;
-    background-color: white;
+    background-color: pink;
 }
 .content{
     display: flex;
     flex-grow:2;
     justify-content: center;
 }
-.closet{
+.row1{
     display: flex;
     flex-direction: row;
     background-color: white;
 }
-.clothes{
-    margin: 0;
+.clothes img{
+    justify-content: center;
     padding: -20px;
     display: flex;
     height: 300px;
+    background-color: purple;
+    image: cover;
 }
 
 .clothes:hover{

@@ -4,14 +4,14 @@
 }
 @font-face {
     font-family: "grapesoda";
-    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    src: url("entry-1/GrapeSoda1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }  
 
   @font-face {
     font-family: "pixelcursive";
-    src: url("fonts/phosphenefont-regular.ttf") format("truetype");
+    src: url("entry-1/phosphenefont-regular1.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
   }  
@@ -25,17 +25,32 @@
 
 .heading{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  justify-content: center;
+  background-color: aqua;
+  flex-direction: row;
+}
+
+.titles{
+  display: flex;
+  flex-direction: column;
+  background-color: aquamarine;
+}
+
+.title{
+  display: flex;
+  background-color: blueviolet;
+}
+.subtitle{
+  background-color:brown;
 }
 
 .button-container{
   height: 65px;
   width: 65px;
-  position: fixed;
-  top: 50px;
-  left: 20px;
+  /* position: fixed; */
+  /* top: 50px;
+  left: 20px; */
 
 }
 
@@ -116,19 +131,19 @@ body {
 }
 .text {
   position: fixed;
-  top: 250px;
-  left: 500px;
+  top: 100px;
+  left: 300px;
   color: #000000;
   font-family: "pixelify", "Inter-Regular", Helvetica;
   font-size: 11px;
   width: 300px;
-  border-radius: 50px;
 }
 .bubble{
   height: 400px;
   position: fixed;
   top: 50px;
   left: 300px;
+  object-fit: cover;
 }
 .cell{
   position: fixed;
