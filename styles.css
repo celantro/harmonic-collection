@@ -27,27 +27,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aqua;
   flex-direction: row;
 }
 
 .titles{
   display: flex;
   flex-direction: column;
-  background-color: aquamarine;
 }
 
 .title{
   display: flex;
-  background-color: blueviolet;
 }
 .subtitle{
-  background-color:brown;
 }
 
 .button-container{
   height: 65px;
   width: 65px;
+  transition: transform 0.5s ease-in-out;
   /* position: fixed; */
   /* top: 50px;
   left: 20px; */
@@ -59,6 +56,10 @@
   width: 100%;
   object-fit: cover;
   
+}
+
+.button-container:hover{
+  transform: rotate(360deg)
 }
 
 .backbutton{
