@@ -36,9 +36,25 @@
 }
 
 .title{
-  display: flex;
+    display: flex;
+    font-size: 1.5vw;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: grapesoda, Helvetica, monospace;
 }
 .subtitle{
+  display: flex;
+        font-size: 1.5vw;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: pixelcursive, Helvetica, monospace;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
 }
 
 .button-container{
