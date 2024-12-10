@@ -17,53 +17,30 @@
 <body>
     <script>
         alert("o(*'▽'*)/☆ﾟ’ welcome!")
+        
     </script>
 
-    <header>
-        <div class="heading">
-            <div class="button-container">
-                <a href="https://celantro.github.io/harmonic-collection/home/">
-                    <img src="images/backbutton.png">
-                </a>
-            </div>
-           <div class="titles">
-            <h1 class="title">₊⋆⊹˚⋆｡ MOM'S CLOTHES FROM NEW YORK₊⋆ ⊹˚⋆ </h1>
-            <h2 class="subtitle">mom's kookai cardigan</h2>
-           </div>
-                
-        </div>
-    </header>
-    <div class="content">
-        <div class="cardigan">
-            <img class="cardiganimg" src="images/cardigan.png" alt="mom's kookai cardigan"> </img>
-        </div>
-        <div class="content2">
-            <div class="textbubble">
-                <div class="text">
-                    <p>Oh, that one. I got it in college</p>
-                    <p>undergrad?</p>
-                    <p>Yes, Vancouver. i don’t remember the street--it was probably Oak. It was the Artizia near UBC.
-                        That was the style at the time--a cute tank and a cardigan. I was always wearing cardigans.
-                        Some of them came in twin sets--I don’t think that one did</p>
-                    <p>so what did kookai mean to you?</p>
-                    <p>Kookai was, like, fancy. Aritzia was kind of like the runway. Instead of looking at fashion shows
-                        to see what’s trendy, people looked at what was sold at Aritzia. It was cool and trendy.
-                        It was like the local style guide. It was kind of for young professionals.</p>
-                    <p>was it expensive? kind of like a treat?</p>
-                    <p>Yes. It’s not cheap. I guess it's like the price of Aritzia now.</p>
-                    <p>Kerrisdale. It was like the Hamptons but cuter, and people liked to walk around there.</p>
-                    <p>I think I have a picture of me and Uncle Alan and two of our friends rollerblading. I feel like
-                        he sent it to me. I’ll try and find it.</p>
-                    <p>okay. i think that's all i need.</p>
-                    <p>Okay, call me if you have more questions</p>
-                </div>
-                <img class="bubble" src="images/bubble-entry1.png"></img>
-            </div>
-            <img class="cell draggable" src="images/cell phone.png">
-        </div>
+    <div class="scarf">
+        <img src="scarf.png">
     </div>
 
-
+    <button class="spin-button" id="audioButton">
+        <img src="cd.png">
+    </button>
+  <audio id="audioPlayer" src="trimcallwmom.m4a"></audio>
+    <script>
+        const button = document.getElementById('audioButton');
+        const audio = document.getElementById('audioPlayer');
+    
+        button.addEventListener('mouseenter', () => {
+          audio.currentTime = 0; // Reset audio to the start
+          audio.play(); // Play the audio
+        });
+    
+        button.addEventListener('mouseleave', () => {
+          audio.pause(); // Pause the audio when the hover ends
+        });
+      </script>
 </body>
 
 </html>
