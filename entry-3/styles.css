@@ -40,6 +40,27 @@ body{
         align-items: center;
         font-family: grapesoda, Helvetica, monospace;
     }
+    .button-container{
+      height: 65px;
+      width: 65px;
+      transition: transform 0.5s ease-in-out;
+      /* position: fixed; */
+      /* top: 50px;
+      left: 20px; */
+    
+    }
+    
+    .button-container img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      
+    }
+    
+    .button-container:hover{
+      transform: rotate(360deg)
+    }
+  
     .heading2 {
         display: flex;
         font-size: 1.5vw;
