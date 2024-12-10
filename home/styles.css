@@ -26,7 +26,7 @@ body {
     background: url(images/closet.png)
 }
 .runninghead{
-    background-color: lightblue;
+    background-color:
     display: flex;
     padding-top: 30px;
 }
@@ -38,29 +38,44 @@ body {
     justify-content: center;
     align-items: center;
     font-family: grapesoda, Helvetica, monospace;
-    background-color: pink;
 }
 .content{
     display: flex;
-    flex-grow:2;
+    flex-direction: column;
     justify-content: center;
+    width: 100vw;
 }
-.row1{
+.row{
     display: flex;
     flex-direction: row;
-    background-color: white;
+    background-color: none;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    animation: scroll 8s linear infinite;
+    
+}
+.clothes{
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 .clothes img{
-    justify-content: center;
-    padding: -20px;
-    display: flex;
-    height: 300px;
-    background-color: purple;
-    image: cover;
+    width: 100%;
+    object-fit: cover;
 }
 
 .clothes:hover{
-    height: 400px;
-    animation-timing-function: ease-in-out;
-    
+    height: 110%;
 }
+
+ /*@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw)
+    }
+}*/
+    
