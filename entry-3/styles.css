@@ -1,7 +1,6 @@
 *{
     margin:0px;
     box-sizing: border-box;
-    background-color:aliceblue;
   }
   @font-face {
       font-family: "grapesoda";
@@ -24,8 +23,44 @@
       font-style: normal;
     }  
 
-    .scarf{
-        height: 100vh;
+body{
+    background-color: white;
+}
+    .runninghead{
+        background-color:
+        display: flex;
+        padding-top: 30px;
+    }
+    .heading{
+        display: flex;
+        font-size: 1.5vw;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: grapesoda, Helvetica, monospace;
+    }
+    .heading2 {
+        display: flex;
+        font-size: 1.5vw;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: pixelcursive, Helvetica, monospace;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .content{
+        justify-content: center;
+        align-items: center;
+        height: flex;
+        flex-direction: row;
+    }
+
+    .scarf img{
+        height: 100%;
         object-fit: cover;
     }
   
@@ -41,6 +76,7 @@
         right: auto;
         border: none;
         object-fit: cover;
+        background-color: white;
       }
 
     .spin-button img{
