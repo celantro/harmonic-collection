@@ -1,0 +1,115 @@
+
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(images/closet.png) / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.dedication{
+    position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	white-space: nowrap;
+	font-family: 'times', sans-serif;
+	z-index: 999;
+	font-size: 15px;
+	text-transform: lowercase;
+	letter-spacing: .02em;
+	color: black;
+	opacity: .25;
+	transition: opacity .5s;
+}
+.dedication a {
+	color: rgb(0, 0, 0);
+}
+.dedication:hover {
+cursor: default;
+}
+
+.masterbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    size: 100vh;
+    background: url(images/closet.png);
+}
+.runninghead{
+    background-color:
+    display: flex;
+    padding-top: 30px;
+}
+.heading{
+    display: flex;
+    font-size: 1.5vw;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: grapesoda, Helvetica, monospace;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 80%;
+    left: 50%;
+    width: 100vw;
+    position: absolute;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    animation: scroll 8s linear infinite;
+    
+}
+.clothes{
+      height: 15rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: ease-in-out 0.30s;
+}
+.clothes img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.clothes:hover{
+    height: 35%;
+    cursor: pointer;
+}
+
+ /*@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw)
+    }
+}*/
+    

@@ -1,69 +1,167 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="1_styles.css">
+    </head>
+    <body>
+        <script>
+            alert("o(*'▽'*)/☆ﾟ’ welcome!")
+        </script>
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>MOM'S CLOTHES</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href="styles.css" type='text/css' media='screen' href='main.css'>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"
-        integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>
-    <script src='main.js'></script>
-</head>
 
-<body>
-    <script>
-        alert("o(*'▽'*)/☆ﾟ’ welcome!")
-    </script>
-
-    <header>
-        <div class="heading">
-           <!-- <div class="button-container">
-                <a href="https://celantro.github.io/harmonic-collection/home/">
-                    <img src="images/backbutton.png">
-                </a>
-            </div> -->
-           <div class="titles">
-            <h1 class="title">₊⋆⊹˚⋆｡ MOM'S CLOTHES FROM NEW YORK₊⋆ ⊹˚⋆ </h1>
-            <h2 class="subtitle">mom's kookai cardigan</h2>
-           </div>
-                
-        </div>
-    </header>
-    <div class="content">
-        <div class="cardigan">
-            <img class="cardiganimg" src="images/cardigan.png" alt="mom's kookai cardigan"> </img>
-        </div>
-        <div class="content2">
-            <div class="textbubble">
-                <div class="text">
-                    <p>Oh, that one. I got it in college</p>
-                    <p>undergrad?</p>
-                    <p>Yes, Vancouver. i don’t remember the street--it was probably Oak. It was the Artizia near UBC.
-                        That was the style at the time--a cute tank and a cardigan. I was always wearing cardigans.
-                        Some of them came in twin sets--I don’t think that one did</p>
-                    <p>so what did kookai mean to you?</p>
-                    <p>Kookai was, like, fancy. Aritzia was kind of like the runway. Instead of looking at fashion shows
-                        to see what’s trendy, people looked at what was sold at Aritzia. It was cool and trendy.
-                        It was like the local style guide. It was kind of for young professionals.</p>
-                    <p>was it expensive? kind of like a treat?</p>
-                    <p>Yes. It’s not cheap. I guess it's like the price of Aritzia now.</p>
-                    <p>Kerrisdale. It was like the Hamptons but cuter, and people liked to walk around there.</p>
-                    <p>I think I have a picture of me and Uncle Alan and two of our friends rollerblading. I feel like
-                        he sent it to me. I’ll try and find it.</p>
-                    <p>okay. i think that's all i need.</p>
-                    <p>Okay, call me if you have more questions</p>
-                </div>
-                <img class="bubble" src="images/bubble-entry1.png"></img>
-            </div>
-            <img class="cell draggable" src="images/cell phone.png">
-        </div>
+<main class="container" data-open="0">
+    <div class="letter-parent">
+      <img class="letter" src="hello_kitty_letter.jpg" onclick="showLetter();" draggable="false">
     </div>
 
+    <style>
+        .letter-parent {
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            z-index: 6;
+            transform: translate(-50%, 0%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: letter-in 3s;
+          }
+          .container[data-open="1"] .letter-parent {
+            animation: letter-out 1s forwards;
+          }
+          
+          @keyframes letter-in {
+            from {
+              transform: translate(-50%, 150vh) rotate(-500deg);
+            }
+            to {
+              transform: translate(-50%, 0vh);
+            }
+          }
+          
+          @keyframes letter-out {
+            from {
+              transform: translate(-50%, 0vh);
+            }
+            to {
+              transform: translate(-50%, 150vh) rotate(200deg);
+            }
+          }
+          
+          .letter {
+            width: 25vw;
+            min-width: 200px;
+            max-width: 400px;
+            transform: rotate(-2deg);
+            cursor: pointer;
+            transition: transform .2s;
+            filter: drop-shadow(1px 4px 4px #9da2aa);;
+          }
+          
+          .letter:hover {
+            transform: scale(1.02) rotate(1deg);
+          }
+          
+          .letter:active {
+            transform: scale(1.1) rotate(1deg);
+          }
+        </style>
 
-</body>
+<script>
+    const letter = document.querySelector('.letter');
+    const container = document.querySelector('.container');
+  const credit = document.querySelector('.dedication'); 
+  
+    const letterImages = [
+      "hello_kitty_letter.jpg",
+      "hello_kitty_letter_2.jpg",
+      "hello_kitty_letter_3.jpg"
+    ];
+  
+    let clickCount = 0;
+  
+    function showLetter() {
+      if (clickCount < letterImages.length - 1) {
+        clickCount++;
+        letter.src = letterImages[clickCount];
+      } else {
+        container.dataset.open = 1;
+        credit.style.display = 'none';
+      }
+    }
+  </script>
 
+        <div class="masterbox">
+                </div>
+              
+                <p class="dedication">
+                    <i>Dedicated to Mom</i> <br>
+                   <a>By Celeste Lin</a>
+              </main>
+              
+            <div class="runninghead"></div>
+            <div class="heading">
+                <h1>₊⋆𖦹 ⊹˚⋆｡ MOM'S CLOTHES FROM NEW YORK₊⋆𖦹 ⊹˚⋆｡</h1>
+                </div>
+            <div class="runninghead"></div>
+            <div class="content">
+                    <div class="row">
+                    <div class="clothes">
+                            <a href="https://celantro.github.io/harmonic-collection/entry_2/"></a>
+                            <img src="tankhome.png" alt="mom's tank top">
+                            </a>
+                    </div>
+                    <div class="clothes">
+                            <a href="https://celantro.github.io/harmonic-collection/entry_1/">
+                            <img src="cardiganwithhanger.png" alt="mom's cardigan">
+                            </a>
+                    </div>
+                    <div class="clothes">
+                            <a href="https://celantro.github.io/harmonic-collection/entry_3/">
+                            <img src="scarf-home.png">
+                            </a>
+                    </div>
+                    <div class="clothes">
+                            <a href="">
+                            <img src="15.png">
+                            </a>
+                    </div>
+                    <div class="clothes">
+                        <a href="https://celantro.github.io/harmonic-collection/entry_2/"></a>
+                        <img src="tankhome.png" alt="mom's tank top">
+                        </a>
+                    </div>
+                    <div class="clothes">
+                        <a href="https://celantro.github.io/harmonic-collection/entry_1/">
+                        <img src="cardiganwithhanger.png" alt="mom's cardigan">
+                        </a>
+                    </div>
+                    <div class="clothes">
+                        <a href="https://celantro.github.io/harmonic-collection/entry_3/">
+                        <img src="scarf-home.png">
+                        </a>
+                    </div>
+                    <div class="clothes">
+                        <a href="">
+                        <img src="15.png">
+                        </a>
+                    </div>
+                    
+                    </div>
+        </div>
+
+
+        <script src="">
+   
+        </script>
+    </body>
 </html>
