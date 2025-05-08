@@ -1,7 +1,4 @@
-*{
-    margin:0px;
-    box-sizing: border-box;
-  }
+
   @font-face {
       font-family: "grapesoda";
       src: url("entry-1/GrapeSoda1.ttf") format("truetype");
@@ -40,14 +37,11 @@ body{
         align-items: center;
         font-family: grapesoda, Helvetica, monospace;
     }
+    
     .button-container{
       height: 65px;
       width: 65px;
-      transition: transform 0.5s ease-in-out;
-      /* position: fixed; */
-      /* top: 50px;
-      left: 20px; */
-    
+      transition: transform 0.5s ease-in-out; 
     }
     
     .button-container img{
@@ -74,10 +68,17 @@ body{
         z-index: 1000;
     }
     .content{
+      display: flex;
         justify-content: center;
         align-items: center;
         height: flex;
         flex-direction: row;
+    }
+
+    .scarf{
+      
+      height: 20rem;
+      width: 20rem;
     }
 
     .scarf img{
@@ -92,7 +93,7 @@ body{
         justify-content: center;
         align-items: center;
         position: fixed;
-        top: 100px;
+        bottom: 100px;
         left: auto;
         right: auto;
         border: none;
