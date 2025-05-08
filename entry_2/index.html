@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>MOM'S SCARF</title>
+    <title>MOM'S TANK</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href="styles.css" type='text/css' media='screen' href='main.css'>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
     <div class="runninghead"></div>
     <div class="heading">
         <div class="button-container">
@@ -26,38 +25,36 @@
         <h1>₊⋆𖦹 ⊹˚⋆｡ MOM'S CLOTHES FROM NEW YORK₊⋆𖦹 ⊹˚⋆｡</h1>
         </div>
     <div class="heading2">
-        <h2>mom's marc jacobs scarf</h2>
+        <h2>mom's tank</h2>
     </div>
         <div class="runninghead"></div>
     
         <div class="content">
-
-    <div class="scarf">
-        <img src="scarf.png">
-    </div>
-    <div class="scarf">
-        <img src="scarf1.png">
+    <div class="tank">
+        <img src="tank-home copy.png">
     </div>
 
-    <button class="spin-button" id="audioButton">
-        <img src="cd.png">
+    <button class="wiggle-button" id="audioButton">
+        <img src="cell phone copy.png">
     </button>
+</div>
 
-        </div>      
-  <audio id="audioPlayer" src="trimcallwmom.m4a"></audio>
-    <script>
-        const button = document.getElementById('audioButton');
-        const audio = document.getElementById('audioPlayer');
-    
-        button.addEventListener('mouseenter', () => {
-          audio.currentTime = 0; // Reset audio to the start
-          audio.play(); // Play the audio
-        });
-    
-        button.addEventListener('mouseleave', () => {
-          audio.pause(); // Pause the audio when the hover ends
-        });
-      </script>
+  <audio id="audioPlayer" src="trimmedCall with Mom Mom.m4a"></audio>
+  <script>
+    const button = document.getElementById('audioButton');
+    const audio = document.getElementById('audioPlayer');
+
+    button.addEventListener('mouseenter', () => {
+      // Play audio when the button is hovered
+      audio.currentTime = 0; // Reset audio to the beginning
+      audio.play();
+    });
+
+    button.addEventListener('mouseleave', () => {
+      // Stop the audio when the mouse leaves
+      audio.pause();
+    });
+  </script>
 </body>
 
 </html>

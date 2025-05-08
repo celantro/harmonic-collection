@@ -1,92 +1,62 @@
-@font-face {
-    font-family: "grapesoda";
-    src: url("fonts/GrapeSoda.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }  
 
   @font-face {
-    font-family: "pixelcursive";
-    src: url("fonts/phosphenefont-regular1.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }  
+      font-family: "grapesoda";
+      src: url("entry-1/GrapeSoda1.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }  
+  
+    @font-face {
+      font-family: "pixelcursive";
+      src: url("entry-1/phosphenefont-regular1.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }  
+  
+    @font-face {
+      font-family: "pixelify";
+      src: url("fonts/PixelifySans-Regular.ttf") format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }  
 
-  @font-face {
-    font-family: "pixelify";
-    src: url("fonts/PixelifySans-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-  }  
-  body{
+body{
     background-color: white;
 }
-
-.button-container{
-  height: 65px;
-  width: 65px;
-  transition: transform 0.5s ease-in-out;
-  /* position: fixed; */
-  /* top: 50px;
-  left: 20px; */
-
-}
-
-.button-container img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+    .runninghead{
+        background-color:
+        display: flex;
+        padding-top: 30px;
+    }
+    .heading{
+        display: flex;
+        font-size: 1.5vw;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: grapesoda, Helvetica, monospace;
+    }
+    
+    .button-container{
+      height: 65px;
+      width: 65px;
+      transition: transform 0.5s ease-in-out; 
+    }
+    
+    .button-container img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      
+    }
+    
+    .button-container:hover{
+      transform: rotate(360deg)
+    }
   
-}
-
-.button-container:hover{
-  transform: rotate(360deg)
-}
-
-.runninghead{
-  display: flex;
-  padding-top: 30px;
-}
-
-  .heading{
-    display: flex;
-    font-size: 1.5vw;
-    padding: 5px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: grapesoda, Helvetica, monospace;
-}
-
-.heading2 {
-    display: flex;
-    font-size: 1.5vw;
-    padding: 5px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: pixelcursive, Helvetica, monospace;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.titles{
-  display: flex;
-  flex-direction: column;
-}
-
-.title{
-    display: flex;
-    font-size: 1.5vw;
-    padding: 5px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-family: grapesoda, Helvetica, monospace;
-}
-.subtitle{
-  display: flex;
+    .heading2 {
+        display: flex;
         font-size: 1.5vw;
         padding: 5px;
         text-align: center;
@@ -96,79 +66,46 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-}
+    }
+    .content{
+      display: flex;
+        justify-content: center;
+        align-items: center;
+        height: flex;
+        flex-direction: row;
+    }
 
-.backbutton{
-  position: fixed;
-  width: 100px;
-  left: 75px;
-  top: 100px;
-  transition-property: all;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
-.backbutton:hover{
-  cursor: pointer;
-  transform: scale(2);
-  transition-property: all;
-  transition-duration: .3s;
-  transition-timing-function: ease-in-out;
-}
+    .scarf{
+      
+      height: 20rem;
+      width: 20rem;
+    }
 
+    .scarf img{
+        height: 100%;
+        object-fit: cover;
+    }
+  
+    .spin-button {
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 100px;
+        left: auto;
+        right: auto;
+        border: none;
+        object-fit: cover;
+        background-color: white;
+      }
 
-body {
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.content{
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.cardigan {
-    padding-top: 10px;
-    padding-left: 50px;
-    padding-right: 0px;
-}
-.cardigan img {
-  max-width: 60%;
-  height: auto;
-  object-fit: cover;
-}
-
-.content2{
-  display: flex;
-  flex-direction: row;
-}
-.textbubble{
-  position: relative;
-}
-.text {
-  position: fixed;
-  top: 100px;
-  left: 300px;
-  color: #000000;
-  font-family: "pixelify", "Inter-Regular", Helvetica;
-  font-size: 11px;
-  width: 300px;
-}
-.bubble{
-  height: 400px;
-  position: fixed;
-  top: 50px;
-  left: 300px;
-  object-fit: cover;
-}
-.cell{
-  position: fixed;
-  height: 200px;
-  right: 200px;
-  bottom: 200px;
-}
-
+    .spin-button img{
+        height: 100px;
+        width: 100px;
+    }
+  
+      .spin-button:hover {
+        transform: rotate(360deg); /* Spins on hover */
+      }

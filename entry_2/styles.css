@@ -1,30 +1,50 @@
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
 
   @font-face {
-      font-family: "grapesoda";
-      src: url("entry-1/GrapeSoda1.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }  
-  
-    @font-face {
-      font-family: "pixelcursive";
-      src: url("entry-1/phosphenefont-regular1.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }  
-  
-    @font-face {
-      font-family: "pixelify";
-      src: url("fonts/PixelifySans-Regular.ttf") format("truetype");
-      font-weight: normal;
-      font-style: normal;
-    }  
+    font-family: "pixelcursive";
+    src: url("fonts/phosphenefont-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
 
-body{
+  @font-face {
+    font-family: "pixelify";
+    src: url("fonts/PixelifySans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+  body{
     background-color: white;
 }
+
+.button-container{
+    height: 65px;
+    width: 65px;
+    transition: transform 0.5s ease-in-out;
+    /* position: fixed; */
+    /* top: 50px;
+    left: 20px; */
+  
+  }
+  
+  .button-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .button-container:hover{
+    transform: rotate(360deg)
+  }
+
     .runninghead{
-        background-color:
         display: flex;
         padding-top: 30px;
     }
@@ -36,24 +56,9 @@ body{
         justify-content: center;
         align-items: center;
         font-family: grapesoda, Helvetica, monospace;
+     
     }
-    
-    .button-container{
-      height: 65px;
-      width: 65px;
-      transition: transform 0.5s ease-in-out; 
-    }
-    
-    .button-container img{
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      
-    }
-    
-    .button-container:hover{
-      transform: rotate(360deg)
-    }
+
   
     .heading2 {
         display: flex;
@@ -68,44 +73,49 @@ body{
         z-index: 1000;
     }
     .content{
-      display: flex;
         justify-content: center;
         align-items: center;
         height: flex;
         flex-direction: row;
+        width: 100%;
+    }
+    .content img{
+        object-fit: cover;
     }
 
-    .scarf{
-      
-      height: 20rem;
-      width: 20rem;
-    }
-
-    .scarf img{
+    .tank img{
         height: 100%;
         object-fit: cover;
     }
   
-    .spin-button {
+    .wiggle-button {
+        width: 120px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
         cursor: pointer;
-        transition: transform 0.5s ease-in-out;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        bottom: 100px;
-        left: auto;
-        right: auto;
-        border: none;
-        object-fit: cover;
-        background-color: white;
+        transition: transform 0.3s ease;
       }
-
-    .spin-button img{
-        height: 100px;
-        width: 100px;
-    }
   
-      .spin-button:hover {
-        transform: rotate(360deg); /* Spins on hover */
+      .wiggle-button:hover {
+        animation: wiggle 0.5s ease-in-out; /* Wiggle effect on hover */
       }
+  
+      @keyframes wiggle {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        75% {
+          transform: rotate(-10deg);
+        }
