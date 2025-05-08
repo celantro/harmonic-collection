@@ -1,0 +1,81 @@
+
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+body {
+    display: flex;
+    flex-direction: column;
+    background: url(images/closet.png) / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.masterbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    size: 100vh;
+    background: url(images/closet.png)
+}
+.runninghead{
+    background-color:
+    display: flex;
+    padding-top: 30px;
+}
+.heading{
+    display: flex;
+    font-size: 1.5vw;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: grapesoda, Helvetica, monospace;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    animation: scroll 8s linear infinite;
+    
+}
+.clothes{
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+.clothes img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.clothes:hover{
+    height: 110%;
+}
+
+ /*@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw)
+    }
+}*/
+    
