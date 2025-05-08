@@ -1,0 +1,112 @@
+@font-face {
+    font-family: "grapesoda";
+    src: url("fonts/GrapeSoda.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+  @font-face {
+    font-family: "pixelcursive";
+    src: url("fonts/phosphenefont-regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+  body{
+    background-color: white;
+}
+
+.button-container{
+    height: 65px;
+    width: 65px;
+    transition: transform 0.5s ease-in-out;
+    /* position: fixed; */
+    /* top: 50px;
+    left: 20px; */
+  
+  }
+  
+  .button-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+  }
+  
+  .button-container:hover{
+    transform: rotate(360deg)
+  }
+
+    .runninghead{
+        background-color:
+        display: flex;
+        padding-top: 30px;
+    }
+    .heading{
+        display: flex;
+        font-size: 1.5vw;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: grapesoda, Helvetica, monospace;
+    }
+    .heading2 {
+        display: flex;
+        font-size: 1.5vw;
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-family: pixelcursive, Helvetica, monospace;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .content{
+        justify-content: center;
+        align-items: center;
+        height: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .content img{
+        object-fit: cover;
+    }
+
+    .scarf img{
+        height: 100%;
+        object-fit: cover;
+    }
+  
+    .wiggle-button {
+        width: 120px;
+        height: 50px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease;
+      }
+  
+      .wiggle-button:hover {
+        animation: wiggle 0.5s ease-in-out; /* Wiggle effect on hover */
+      }
+  
+      @keyframes wiggle {
+        0%, 100% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-10deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        75% {
+          transform: rotate(-10deg);
+        }
